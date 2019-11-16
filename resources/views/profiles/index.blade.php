@@ -7,17 +7,18 @@
             <img src="https://avatars2.githubusercontent.com/u/38535119?s=460&v=4" style="width: 200px" class="rounded-circle "  alt="">
          </div>
         <div class="col-8 pt-5">
-            <div>
-                <h1> {{ $user->username }} </h1>
+            <div class="d-flex justify-content-between align-items-lg-center">
+                <h1> {{ $user->name }} </h1>
+                <a  class="" href="#">Add new post </a>
             </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>102</strong> posts</div>
                 <div class="pr-5"><strong>20K</strong> followers</div>
                 <div class="pr-5"><strong>50</strong> follwing</div>
             </div>
-            <div class="pt-4 font-weight-bold">AmineBouaziz.website </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis facilis fugiat incidunt laborum, nam tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus excepturi harum incidunt, molestias nobis temporibus!</div>
-            <div><a href="#">www.aminebouaziz.website</a></div>
+            <div class="pt-4 font-weight-bold"> {{ $user->profile->title }} </div>
+            <div> {{$user->profile->description }} </div>
+            <div><a href="#"> {{$user->profile->url ?? 'N A'}} </a></div>
         </div>
     </div>
 
